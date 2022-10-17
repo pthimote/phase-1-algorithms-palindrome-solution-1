@@ -1,10 +1,16 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let reversedWord = word.split('').reverse().join('')
+  return(reversedWord === word)
 }
 
 /* 
   Add your pseudocode here
 */
+// create a function of 'isPalindrome' with a parameter of 'word.
+// make it so its able to accept words that are spelt the same forward and backwards.
+// if a word  is the same forward and backwords is true, if not false!
+// combine the 3 methods to reverse a string using .split(''), .reverse(), .join('')
 
 /*
   Add written explanation of your solution here
@@ -16,7 +22,17 @@ if (require.main === module) {
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
-  console.log("");
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("civic"))
+
+  console.log("Exoecting: true");
+  console.log("=>", isPalindrome("level"))
+  
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("rock"))
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("tower"))
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
